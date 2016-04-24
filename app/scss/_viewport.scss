@@ -1,0 +1,29 @@
+@import "rainbow";
+
+$small: 550px;
+$medium: 768px;
+
+// Breakpoints
+@mixin bp($viewport) {
+  @if $viewport == 'small' {
+    @media(max-width:$small) {
+      @content;
+    }
+  }
+  @else if $viewport == 'medium' {
+    @media(min-width: $small+1) and (max-width: $medium) {
+      @content;
+    }
+  }
+}
+
+// Global body styles
+body {
+  background-color: $silver;
+  font-family: Helvetica, Arial, sans-serif;
+  letter-spacing: 0.1em;
+  line-height: 1.5em;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}

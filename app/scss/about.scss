@@ -1,0 +1,45 @@
+@import 'viewport';
+@import 'helpers';
+
+.about {
+  font-family: 'Orbitron', Helvetica, Arial, sans-serif;
+  padding: 20px;
+  text-align: center;
+
+  @include bp(small) {
+    padding: 10px;
+  }
+
+  .me {
+    background-image: url('../images/moi.jpg');
+    background-size: 100%;
+    box-shadow: 0 0 50px 50px $silver inset;
+    position: relative;
+    width: 300px;
+    height: 267px;
+    margin: 0 auto 50px;
+  }
+
+  .description {
+    color: white;
+    width: 50%;
+    margin: 0 auto;
+
+    @include bp(medium) {
+      width: 70%;
+    }
+
+    @include bp(small) {
+      width: 90%;
+    }
+  }
+
+  .rainbow {
+    background-image: -webkit-gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );
+    background-image: gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );
+    color:transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+  }
+
+}

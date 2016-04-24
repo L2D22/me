@@ -1,0 +1,17 @@
+{
+  "name": "Keyboard-Remote",
+  "version": "0.0.1",
+  "description": "Keyboard Remote Prototype",
+  "main": "Gulpfile.js",
+  "author": "Liza Detrick",
+  "license": "MIT",
+  "devDependencies": {
+    "browser-sync": "^2.10.1",
+    "gulp": "^3.9.0",
+    "gulp-browserify": "^0.5.1",
+    "gulp-data": "^1.2.1",
+    "gulp-jade": "^1.1.0",
+    "gulp-sass": "^2.1.1",
+    "uglify": "^0.1.5"
+  }
+}

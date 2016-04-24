@@ -1,0 +1,40 @@
+@import 'viewport';
+@import 'helpers';
+
+.resume {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+
+  .name {
+    font-family: 'Orbitron', Helvetica, Arial, sans-serif;
+    font-size: 50px;
+    line-height: 50px;
+    span {
+      display: block;
+    }
+  }
+
+  h1 {
+    line-height: 58px;
+    margin: 30px 0 0 0;
+  }
+
+  h2 {
+    margin: 50px 0 25px;
+  }
+
+  p {
+    margin: 0 0 10px 0;
+    &.title {
+      margin: 25px 0 10px;
+      &.first {
+        margin-top: 40px;
+      }
+    }
+  }
+
+  a {
+    text-decoration: none;
+  }
+}

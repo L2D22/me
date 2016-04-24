@@ -1,0 +1,16 @@
+doctype html
+html.no-js(lang='')
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='x-ua-compatible', content='ie=edge')
+    block pageTitle
+    title Liza Detrick - #{title}
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    link(rel='icon', type='image/png', href='images/favicon-heart.ico')
+    link(href='https://fonts.googleapis.com/css?family=Quicksand:400,700|Bangers|Orbitron:400,700|Audiowide', rel='stylesheet', type='text/css')
+    block css
+  body
+    block pageClass
+    main(class="#{pageClass}")
+      block content
+    block scripts

@@ -1,0 +1,55 @@
+.pink {
+  color: #fad9c5; }
+
+.yellow {
+  color: #faf8a7; }
+
+.green {
+  color: #9afabf; }
+
+.blue {
+  color: #95edfa; }
+
+.purple {
+  color: #e2e1fd; }
+
+body {
+  background-color: #acacac;
+  font-family: Helvetica, Arial, sans-serif;
+  letter-spacing: 0.1em;
+  line-height: 1.5em;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0; }
+
+.about {
+  font-family: 'Orbitron', Helvetica, Arial, sans-serif;
+  padding: 20px;
+  text-align: center; }
+  @media (max-width: 550px) {
+    .about {
+      padding: 10px; } }
+  .about .me {
+    background-image: url("../images/moi.jpg");
+    background-size: 100%;
+    box-shadow: 0 0 50px 50px #acacac inset;
+    position: relative;
+    width: 300px;
+    height: 267px;
+    margin: 0 auto 50px; }
+  .about .description {
+    color: white;
+    width: 50%;
+    margin: 0 auto; }
+    @media (min-width: 551px) and (max-width: 768px) {
+      .about .description {
+        width: 70%; } }
+    @media (max-width: 550px) {
+      .about .description {
+        width: 90%; } }
+  .about .rainbow {
+    background-image: -webkit-gradient(linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2), color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22));
+    background-image: gradient(linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2), color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22));
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text; }

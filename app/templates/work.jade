@@ -1,0 +1,124 @@
+extends ./layout.jade
+
+block pageTitle
+  - var title = "Work";
+
+block css
+  link(rel='stylesheet', href='css/work.css')
+
+block pageClass
+  - var pageClass = 'work';
+
+block content
+  h1.pink Work
+  section
+    h2.first
+      a.yellow(target='_blank', href='http://www.apple.com/') Apple Inc.
+    p.url
+      a.green(target='_blank', href='http://www.apple.com/ipad-pro/') Ipad Pro
+    p.description.blue Developed the flagship marketing page for Apple Ipad Pro. It featured parallax scrolling, animations, and responsive layout.
+  section
+    h2
+     a.yellow(target='_blank', href='http://hugeinc.com/') Huge
+    .site
+     p.company
+       a.green(target='_blank', href='http://www.logitech.com/') Logitech
+     p.url
+       a.blue(target='_blank', href='http://www.logitech.com/') Computer Accessories
+     p.description.purple
+       | Redesign of Logitech’s Home, Compare, and PDP pages. Developed using a module-based system that flexed seamlessly across screen sizes and presented a consistent experience for the user. Unique aspects of the new design included parallax, scroll jacking, CSS3 transitions, deep linking, and product filtering. Tech Stack: Browserify, Gulp, Node, Handlebars, JSON, AJAX, and Jenkins.
+    .site
+      p.company.green 
+        a.green(target='_blank', href='http://www.lexus.com/') Lexus
+      p.url
+        a.blue(target='_blank', href='http://www.lexus.com/') Luxury Cars
+      p.description.purple
+        | Huge rebuilt Lexus.com using a service-oriented architecture based on cutting-edge open source software standards. Rich product information, engaging branding, regionalized content, and streamlined navigation were the guiding principles of the new site strategy. Even complex user interactions, like comparing models, configuring a car, and finding a dealer can be completed regardless of device due to the site's responsive design, which provides users with an application-like experience. Built in less than 7 months using lean platforms, Scrum, BDD, TDD and CI. Tech Stack: Java, Spring, Hibernate,Teamsite, MySQL, REST, Cucumber, Selenium, Transactions with AWS (EC2) and Solaris server.
+    .site
+     p.company
+       a.green(target='_blank', href='https://www262.americanexpress.com/mobile/credit-card') American Express
+     p.url
+       a.blue(target='_blank', href='https://www262.americanexpress.com/mobile/credit-card') Mobile Credit Card
+     p.description.purple
+       | Built a two page credit card comparison flow for American Express. Used HTML5, CSS3, jQuery, Cookies, Sessions and AJAX. Made for mobile IOS/Android.
+
+    .site
+     p.company
+       a.green(target='_blank', href='http://braingames.nationalgeographic.com/') National Geographic
+     p.url
+       a.blue(target='_blank', href='http://braingames.nationalgeographic.com/') Brain Games
+     p.description.purple
+       | Constructed a gamification web-app for the National Geographic Brain Games show. Used HTML5, CSS3, jQuery, and AJAX. Social integration with Twitter and Facebook connect. Built for tablet and browsers FF 3.6+, IE8+, Safari, Chrome.
+    .site
+     p.company
+       a.green(target='_blank', href='http://www.cspire.com/comparetool/') C-Spire
+     p.url
+       a.blue(target='_blank', href='http://www.cspire.com/comparetool/') Compare Tool
+     p.description.purple
+       | Created a cell phone comparison tool for C Spire. Used HTML5,CSS3 animations, jQuery, jQuery ui, and json. Built for tablet and browsers FF 3.6+, IE8+, Safari, Chrome.
+    .site
+     p.company
+       a.green(target='_blank', href='https://www.petinsurance.com/enroll/Quote1.aspx') VPI
+     p.url
+       a.blue(target='_blank', href='https://www.petinsurance.com/enroll/Quote1.aspx') Enroll Quote
+     p.description.purple
+       | Developed a pet insurance quote flow for VPI. Implemented custom inputs form fields, sitcky divs, CSS3, HTML5, and jQuery. Built for a browser based experience only, FF 3.6+, IE7+, Safari, Chrome.
+    .site
+     p.company
+       a.green(target='_blank', href='http://www.maybelline.com') Maybelline
+     p.url
+       a.blue(target='_blank', href='http://www.maybelline.com') Maybelline
+     p.description.purple
+       | Full website platform redesign for Maybelline. Migrated maybelline.com to a more easily updatable CMS. Used Ruby, Middleman, HAML, and SASS to transfer and reconstruct pages.
+    .site
+     p.company
+        a.green(target='_blank', href='https://secure.celebritycruises.com/mycelebrity/home.do') Celebrity Cruises
+     p.url
+       a.blue(target='_blank', href='https://secure.celebritycruises.com/mycelebrity/home.do') My Celebrity
+     p.description.purple
+       | Developed the travel booking sections for Celebrity Cruises. Used Ruby, Middleman, HAML, SASS, and jQuery. Built for browsers FF 3.6+, IE7+, Safari, Chrome.
+    .site
+     p.company.green
+       a.green(target='_blank', href='https://www.saltmoney.org/index.html') ASA
+     p.url
+       a.blue(target='_blank', href='https://www.saltmoney.org/index.html') Salt Money
+     p.description.purple
+       | Constructed a web application of three finnancial lessons informing users about cashflow and loan debts for ASA. Used Back-bone, High-charts.js, CSS3, HTML5, and jQuery. Built for browsers FF 3.6+, IE8+, Safari, Chrome.
+    .site
+     p.company
+       a.green(target='_blank', href='http://www.ge.com/') General Electric
+     p.url
+       a.blue(target='_blank', href='http://www.ge.com/') GE
+     p.description.purple
+       | Website reskin and re-design, including creating loan and interest calculators for General Electric. Used jQuery, HTML5, CSS, and SVN. Built for browsers FF 3.6+, IE7+, Safari, Chrome.
+  section
+    h2
+     a.yellow(target='_blank', href='http://drawingfrommemory.com/') Drawing From Memory
+    .site
+     p.company
+       a.green(target='_blank', href='http://www.heidimerrick.com/') Heidi Merrick
+     p.url
+       a.blue(target='_blank', href='http://www.heidimerrick.com/') Fashion
+     p.description.purple
+       | Fashion e-commerce site re-design and integration for Heidi Merrick. Used business catalyst CMS, HTML5, CSS3, and jQuery. Built for browsers FF 3.6+, IE8+, Safari, Chrome.
+    .site
+     p.company
+       a.green(target='_blank', href='http://www.geoffreygood.com/') Geoffrey Good
+     p.url
+       a.blue(target='_blank', href='http://www.geoffreygood.com/') Handcrafted Jewelry
+     p.description.purple
+       | Website re-design and integration for NYC jewelry, Geoffrey Good. Used business catalyst CMS, HTML5, CSS3, and jQuery. Built for browsers FF 3.6+, IE8+, Safari, Chrome.
+    .site
+     p.company
+       a.green(target='_blank', href='http://goldbugpasadena.com/') Goldbug
+     p.url
+       a.blue(target='_blank', href='http://goldbugpasadena.com/') Boutique Shop
+     p.description.purple
+       | An art shop website re-design and integration for Goldbug. Used Business Catalyst CMS, HTML5, CSS3, and jQuery. Built for browsers FF 3.6+, IE8+, Safari, Chrome.
+    .site
+     p.company
+       a.green(target='_blank', href='http://lawsonfenning.com/') Lason Fenning
+     p.url
+       a.blue(target='_blank', href='http://lawsonfenning.com/') Furniture Store
+     p.description.purple
+       | Website re-design for a Los Angeles boutique furniture seller, Lason Fenning. Used Business Catalyst CMS, HTML5, CSS3, and jQuery. Built for browsers FF 3.6+, IE8+, Safari, Chrome.
