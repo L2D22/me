@@ -6,13 +6,14 @@
      *  Initilaize main scripts
      */
     function initialize() {
+      console.log('initalize')
       navigation();
     }
 
     function navigation() {
-      var heart = document.querySelector('.heart');
-      var close = document.querySelector('.close');
       var main = document.querySelector('main');
+      var heart = main.classList.contains('home') ? document.querySelector('.heart-home') : document.querySelector('.heart');
+      var close = document.querySelector('.close');
 
       heart.addEventListener('click', navigationChange, false);
       close.addEventListener('click', navigationChange, false);

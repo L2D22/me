@@ -10,17 +10,32 @@
 @import 'viewport';
 @import 'helpers';
 
+
+@media print {
+  .heart.nav {
+    display: none;
+  }
+}
+
 body {
   font-family: 'Orbitron', Helvetica, Arial, sans-serif;
   width: 100%;
   height: 100%;
   main {
-    position: absolute;
-    width: 100%;
-    height: 100%;
+    &.home {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+    }
 
     &.nav-open {
-      .intro {
+      .content {
+        filter: blur(5px);
+      }
+
+      .intro,
+      .me,
+      .candy-heart, {
         opacity: 0;
       }
       nav {
@@ -31,41 +46,8 @@ body {
   }
 }
 
-// INTRO
-.intro {
-  @include center;
-  opacity: 1;
-  transition: all 1s ease;
-}
-
-h1 {
-  font-size: 25px;
-  text-align: center;
-  margin: 20px 0;
-
-  @include bp(small) {
-    font-size: 20px;
-  }
-
-  span {
-    display: block;
-    padding: 0 0 15px 0;
-
-    @include bp(small) {
-      padding: 0 0 10px 0;
-    }
-  }
-}
-
-.hello {
-  position: relative;
-  padding: 10px 0 20px;
-  width: 200px;
-
-  @include bp(small) {
-    width: 150px;
-    padding: 5px 0 10px;
-  }
+img {
+  transition: all 0.3s ease;
 }
 
 // NAVIGATION
@@ -78,7 +60,7 @@ nav {
   height: 100%;
   opacity: 0;
   z-index: -1;
-  transition: all 1s ease;
+  transition: all 0.5s ease;
 
   ul {
     @include center;
@@ -87,100 +69,167 @@ nav {
     text-align: center;
     .close {
       font-size: 20px;
-      padding: 20px;
+      padding: 10px;
     }
     a {
       display: block;
       color: lavender;
       text-decoration: none;
-      padding: 20px 0;
+      padding: 15px 0;
     }
   }
 }
 
-// IMAGES
-img {
-  position: absolute;
-}
-
-.banana {
-  top: 3%;
-  left: 3%;
-  width: 80px;
-}
-
-.doggy {
-  top: 30%;
-  left: 15%;
-  width: 150px;
-
-  @include bp(medium) {
-    left: 5%;
-  }
-
-  @include bp(small) {
-    display: none;
-  }
-}
-
-.kitty {
-  top: 30%;
-  right: 13%;
-  width: 150px;
-
-  @include bp(medium) {
-    right: 5%;
-  }
-
-  @include bp(small) {
-    display: none;
-  }
-}
-
-.jake {
-  bottom: 10px;
-  right: 75px;
-  width: 150px;
-
-  @include bp(small) {
-    bottom: 3%;
-    right: -10px;
-  }
-}
-
-.candy-heart {
-  position: relative;
-  left: 50%;
-  margin-left: -40px;
-  width: 80px;
-
-  @include bp(small) {
-    bottom: 3%;
-  }
-}
-
-.rainbow-vomit {
-  top: 20px;
-  right: 40px;
-  width: 100px;
-
-  @include bp(small) {
-    top: 3%;
-    right: 3%;
-  }
-}
-
-.rex {
-  bottom: 30px;
-  left: 0px;
-  width: 150px;
-
-  @include bp(small) {
-    bottom: 10px;
-    left: -50px;
-  }
-}
-
-canvas {
+.heart {
   display: block;
+  .candy-heart {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    margin-left: 0;
+    width: 40px;
+    z-index: 10;
+  }
+}
+
+.home {
+
+  .heart.nav {
+    display: none;
+  }
+
+  a.heart-home { display: block }
+  .candy-heart {
+    position: relative;
+    left: 50%;
+    margin-left: -40px;
+    width: 80px;
+    animation: rotation 1s infinite;
+    animation-timing-function: linear;
+
+    @include bp(small) {
+      bottom: 3%;
+    }
+  }
+
+  @keyframes rotation {
+      0% { transform: rotate(0deg); }
+      25% { transform: rotate(5deg) }
+      50% { transform: rotate(-5deg) }
+      100% { transform: rotate(0deg) }
+  }
+
+  // INTRO
+  .intro {
+    @include center;
+    opacity: 1;
+    transition: all 0.3s ease;
+  }
+
+  .hello {
+    position: relative;
+    padding: 10px 0 20px;
+    width: 200px;
+
+    @include bp(small) {
+      width: 150px;
+      padding: 5px 0 10px;
+    }
+  }
+
+  h1 {
+    font-size: 25px;
+    text-align: center;
+    margin: 20px 0;
+
+    @include bp(small) {
+      font-size: 20px;
+    }
+
+    span {
+      display: block;
+      padding: 0 0 15px 0;
+
+      @include bp(small) {
+        padding: 0 0 10px 0;
+      }
+    }
+  }
+
+  // IMAGES
+  img {
+    position: absolute;
+  }
+
+  .banana {
+    top: 3%;
+    left: 3%;
+    width: 80px;
+  }
+
+  .doggy {
+    top: 30%;
+    left: 15%;
+    width: 150px;
+
+    @include bp(medium) {
+      left: 5%;
+    }
+
+    @include bp(small) {
+      display: none;
+    }
+  }
+
+  .kitty {
+    top: 30%;
+    right: 13%;
+    width: 150px;
+
+    @include bp(medium) {
+      right: 5%;
+    }
+
+    @include bp(small) {
+      display: none;
+    }
+  }
+
+  .jake {
+    bottom: 10px;
+    right: 75px;
+    width: 150px;
+
+    @include bp(small) {
+      bottom: 3%;
+      right: -10px;
+    }
+  }
+
+
+  .rainbow-vomit {
+    top: 20px;
+    right: 40px;
+    width: 100px;
+
+    @include bp(small) {
+      top: 3%;
+      right: 3%;
+    }
+  }
+
+  .rex {
+    bottom: 30px;
+    left: 0px;
+    width: 150px;
+
+    @include bp(small) {
+      bottom: 10px;
+      left: -50px;
+    }
+  }
+
+  canvas {
+    display: block;
+  }
 }

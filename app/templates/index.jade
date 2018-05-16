@@ -10,34 +10,21 @@ block pageClass
   - var pageClass = 'home';
   
 block content
-  nav
-    ul
-      li
-        a.close(href="#") x
-      li
-        a(href="about.html") About
-      li
-        a(href='resume.html') Resume
-      li
-        a(href='work.html') Work
-      li
-        a(href='https://www.linkedin.com/in/liza-detrick-733a1926', target='_blank') LinkedIn
-      li
-        a(href='https://github.com/L2D22', target='_blank') Github
-  div.intro
-    h1 
-      span Hello,   
-      img.hello(src="images/kermit.gif", alt="")
-      span you've reached 
-      span Liza Detrick 
-    a.heart
-      img.candy-heart(src="images/candy-heart.png")
-  img.rainbow-vomit(src="images/rainbow-vomit.gif")
-  img.rex(src="images/trex-walk.gif")
-  img.banana(src="images/big-dancing-banana-smiley-emoticon.gif")
-  img.doggy(src="images/doggy.gif")
-  img.kitty(src="images/kitty.gif")
-  img.jake(src="images/jake.gif")
+  div.content
+    div.intro
+      h1 
+        span Hello,   
+        img.hello(src="images/kermit.gif", alt="")
+        span you've reached 
+        span Liza Detrick 
+      a.heart-home
+        img.candy-heart(src="images/candy-heart-filled.png")
+    img.rainbow-vomit(src="images/rainbow-vomit.gif")
+    img.rex(src="images/trex-walk.gif")
+    img.banana(src="images/big-dancing-banana-smiley-emoticon.gif")
+    img.doggy(src="images/doggy.gif")
+    img.kitty(src="images/kitty.gif")
+    img.jake(src="images/jake.gif")
   
 block scripts
   script(src='js/main.js')

@@ -1,3 +1,4 @@
+@import 'main';
 @import 'viewport';
 @import 'helpers';
 
@@ -11,13 +12,15 @@
   }
 
   .me {
-    background-image: url('../images/moi.jpg');
+    background-image: url('../images/moi-trans.png');
     background-size: 100%;
-    box-shadow: 0 0 50px 50px $silver inset;
+    background-repeat: no-repeat;
+    box-shadow: 0 -10px 5px 0px $silver inset;
     position: relative;
     width: 300px;
     height: 267px;
     margin: 0 auto 50px;
+    transition: all 0.3s ease;
   }
 
   .description {

@@ -22,50 +22,30 @@ body {
   margin: 0;
   padding: 0; }
 
+@media print {
+  .heart.nav {
+    display: none; } }
+
 body {
   font-family: 'Orbitron', Helvetica, Arial, sans-serif;
   width: 100%;
   height: 100%; }
-  body main {
+  body main.home {
     position: absolute;
     width: 100%;
     height: 100%; }
-    body main.nav-open .intro {
-      opacity: 0; }
-    body main.nav-open nav {
-      opacity: 0.8;
-      z-index: 1; }
+  body main.nav-open .content {
+    filter: blur(5px); }
+  body main.nav-open .intro,
+  body main.nav-open .me,
+  body main.nav-open .candy-heart {
+    opacity: 0; }
+  body main.nav-open nav {
+    opacity: 0.8;
+    z-index: 1; }
 
-.intro {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  opacity: 1;
-  transition: all 1s ease; }
-
-h1 {
-  font-size: 25px;
-  text-align: center;
-  margin: 20px 0; }
-  @media (max-width: 550px) {
-    h1 {
-      font-size: 20px; } }
-  h1 span {
-    display: block;
-    padding: 0 0 15px 0; }
-    @media (max-width: 550px) {
-      h1 span {
-        padding: 0 0 10px 0; } }
-
-.hello {
-  position: relative;
-  padding: 10px 0 20px;
-  width: 200px; }
-  @media (max-width: 550px) {
-    .hello {
-      width: 150px;
-      padding: 5px 0 10px; } }
+img {
+  transition: all 0.3s ease; }
 
 nav {
   background-color: #000;
@@ -76,7 +56,7 @@ nav {
   height: 100%;
   opacity: 0;
   z-index: -1;
-  transition: all 1s ease; }
+  transition: all 0.5s ease; }
   nav ul {
     position: absolute;
     top: 50%;
@@ -87,78 +67,137 @@ nav {
     text-align: center; }
     nav ul .close {
       font-size: 20px;
-      padding: 20px; }
+      padding: 10px; }
     nav ul a {
       display: block;
       color: lavender;
       text-decoration: none;
-      padding: 20px 0; }
+      padding: 15px 0; }
 
-img {
+.heart {
+  display: block; }
+  .heart .candy-heart {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    margin-left: 0;
+    width: 40px;
+    z-index: 10; }
+
+.home .heart.nav {
+  display: none; }
+
+.home a.heart-home {
+  display: block; }
+
+.home .candy-heart {
+  position: relative;
+  left: 50%;
+  margin-left: -40px;
+  width: 80px;
+  animation: rotation 1s infinite;
+  animation-timing-function: linear; }
+  @media (max-width: 550px) {
+    .home .candy-heart {
+      bottom: 3%; } }
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg); }
+  25% {
+    transform: rotate(5deg); }
+  50% {
+    transform: rotate(-5deg); }
+  100% {
+    transform: rotate(0deg); } }
+
+.home .intro {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 1;
+  transition: all 0.3s ease; }
+
+.home .hello {
+  position: relative;
+  padding: 10px 0 20px;
+  width: 200px; }
+  @media (max-width: 550px) {
+    .home .hello {
+      width: 150px;
+      padding: 5px 0 10px; } }
+
+.home h1 {
+  font-size: 25px;
+  text-align: center;
+  margin: 20px 0; }
+  @media (max-width: 550px) {
+    .home h1 {
+      font-size: 20px; } }
+  .home h1 span {
+    display: block;
+    padding: 0 0 15px 0; }
+    @media (max-width: 550px) {
+      .home h1 span {
+        padding: 0 0 10px 0; } }
+
+.home img {
   position: absolute; }
 
-.banana {
+.home .banana {
   top: 3%;
   left: 3%;
   width: 80px; }
 
-.doggy {
+.home .doggy {
   top: 30%;
   left: 15%;
   width: 150px; }
   @media (min-width: 551px) and (max-width: 768px) {
-    .doggy {
+    .home .doggy {
       left: 5%; } }
   @media (max-width: 550px) {
-    .doggy {
+    .home .doggy {
       display: none; } }
 
-.kitty {
+.home .kitty {
   top: 30%;
   right: 13%;
   width: 150px; }
   @media (min-width: 551px) and (max-width: 768px) {
-    .kitty {
+    .home .kitty {
       right: 5%; } }
   @media (max-width: 550px) {
-    .kitty {
+    .home .kitty {
       display: none; } }
 
-.jake {
+.home .jake {
   bottom: 10px;
   right: 75px;
   width: 150px; }
   @media (max-width: 550px) {
-    .jake {
+    .home .jake {
       bottom: 3%;
       right: -10px; } }
 
-.candy-heart {
-  position: relative;
-  left: 50%;
-  margin-left: -40px;
-  width: 80px; }
-  @media (max-width: 550px) {
-    .candy-heart {
-      bottom: 3%; } }
-
-.rainbow-vomit {
+.home .rainbow-vomit {
   top: 20px;
   right: 40px;
   width: 100px; }
   @media (max-width: 550px) {
-    .rainbow-vomit {
+    .home .rainbow-vomit {
       top: 3%;
       right: 3%; } }
 
-.rex {
+.home .rex {
   bottom: 30px;
   left: 0px;
   width: 150px; }
   @media (max-width: 550px) {
-    .rex {
+    .home .rex {
       bottom: 10px;
       left: -50px; } }
 
-canvas {
+.home canvas {
   display: block; }
